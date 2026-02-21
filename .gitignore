@@ -1,0 +1,40 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binaries
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Go workspace files
+bin/
+pkg/
+
+# Go module files (if you want to ignore downloaded modules)
+# Note: Usually you keep go.mod and go.sum, so comment these out
+# vendor/
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# MacOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.swp
