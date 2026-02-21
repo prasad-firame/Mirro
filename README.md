@@ -1,8 +1,20 @@
 ﻿# Mirro
+<p align="center">
+<img src="https://visitor-badge.laobi.icu/badge?page_id=prasad-firame.mirro" alt="Visitors" /> 
+<img src="https://img.shields.io/github/actions/workflow/status/prasad-firame/mirro/go.yml" alt="Build" /> 
+<img src="https://img.shields.io/codecov/c/github/prasad-firame/mirro" alt="Coverage" /> 
+<a href="https://goreportcard.com/report/github.com/neooxdev/mirro">
+<img src="https://goreportcard.com/badge/github.com/neooxdev/mirro" alt="Go Report Card" />
+</a>
+<img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License" />
+</p>
 
-![Visitors](https://visitor-badge.glitch.me/badge?page_id=prasad-firame.mirro)
-[![Go Report Card](https://goreportcard.com/badge/github.com/neooxdev/mirro)](https://goreportcard.com/report/github.com/neooxdev/mirro)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+<p align="center">
+<img src="https://img.shields.io/github/v/release/prasad-firame/mirro" alt="Release" /> 
+<img src="https://img.shields.io/badge/go-1.20-blue" alt="Go Version" /> 
+<img src="https://img.shields.io/github/stars/prasad-firame/mirro?style=social" alt="Stars" /> 
+<img src="https://img.shields.io/github/forks/prasad-firame/mirro?style=social" alt="Forks" />
+</p>
 
 **Mirro** is a lightweight, high-performance, open-source reverse proxy built in Go.  
 Efficiently route HTTP, TCP, and WebSocket traffic, handle load balancing, and manage requests seamlessly in modern web infrastructure.
@@ -22,7 +34,7 @@ Efficiently route HTTP, TCP, and WebSocket traffic, handle load balancing, and m
 ---
 
 ## Folder Structure
-
+```bash
 mirro/
 ├── README.md            # Project documentation
 ├── LICENSE              # MIT License
@@ -46,7 +58,7 @@ mirro/
 │   └── loadbalancer_test.go
 └── docs/                # Extended documentation
     └── architecture.md
-
+```
 ---
 
 ## Installation
@@ -59,7 +71,7 @@ mirro/
 ---
 
 ### macOS / Linux
-
+``` bash
 ## 1. Clone the repository
 git clone https://github.com/neooxdev/mirro.git
 cd mirro
@@ -72,11 +84,11 @@ go build ./cmd/mirro
 
 ## 4. Test with sample configuration
 curl http://localhost:8080
-
+```
 ---
 
 ### Windows (PowerShell)
-
+```bash
 ### 1. Clone the repository
 git clone https://github.com/neooxdev/mirro.git
 cd mirro
@@ -89,7 +101,7 @@ go build ./cmd/mirro
 
 ### 4. Test with sample configuration
 Invoke-WebRequest -Uri http://localhost:8080
-
+```
 ---
 
 ## Quickstart Example
@@ -97,6 +109,7 @@ Invoke-WebRequest -Uri http://localhost:8080
 Create `config.yaml`:
 
 # config.yaml
+```bash
 server:
   address: ":8080"
 
@@ -108,16 +121,18 @@ routes:
   - path: "/api"
     backend: "http://localhost:9001"
     loadBalance: "leastconn"
+```
 
 Run Mirro with config:
-
+```bash
 ./mirro serve --config config.yaml
+```
 
 Test routing:
-
+``` bash
 curl http://localhost:8080/
 curl http://localhost:8080/api
-
+```
 ---
 
 ## Usage
@@ -147,11 +162,5 @@ MIT License
 
 ---
 
-## Contact
-
-- GitHub: [https://github.com/neooxdev/mirro](https://github.com/neooxdev/mirro)  
-- Twitter: [@rev-proxy](https://twitter.com/rev-proxy)  
-
-- Email: prasadfirame18@email.com
 
 
