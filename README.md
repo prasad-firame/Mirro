@@ -77,17 +77,17 @@ curl http://localhost:8080
 
 ### Windows (PowerShell)
 
-## 1. Clone the repository
+### 1. Clone the repository
 git clone https://github.com/neooxdev/mirro.git
 cd mirro
 
-## 2. Build the CLI
+### 2. Build the CLI
 go build ./cmd/mirro
 
-## 3. Run Mirro locally
+### 3. Run Mirro locally
 .\mirro.exe serve
 
-## 4. Test with sample configuration
+### 4. Test with sample configuration
 Invoke-WebRequest -Uri http://localhost:8080
 
 ---
@@ -153,4 +153,5 @@ MIT License
 - Twitter: [@rev-proxy](https://twitter.com/rev-proxy)  
 
 - Email: prasadfirame18@email.com
+
 
